@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <script src="https://aframe.io/releases/1.0.1/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js"></script>
+    <script src="https://supereggbert.github.io/aframe-htmlembed-component/dist/build.js"></script>
+    <a-frame>
+
+        <a-scene>
+            <a-assets>
+                <a-asset-item id="plane" src="./assets/super_tucano_fab/scene.gltf"></a-asset-item>
+            </a-assets>
+            <a-entity
+                id="camera"
+                camera
+                position="0 4.1 -1"
+                look-controls="pointerLockEnabled: true"      
+                wasd-control  
+            >
+            </a-entity>
+
+                <a-plane
+                id="ground"
+                position="0 0 -20"
+                rotation="-90 0 0"
+                static-body
+                color="#2CaC00"
+                height="500"
+                width="500"
+                visible="true"
+                shadow="cast: false; receive: true"
+            >
+            </a-plane>
+            <a-sky color="#87ceeb"></a-sky>
+            <a-entity gltf-model="#plane" position="0 3 0" shadow="cast: true; receive: true"></a-entity>
+            <a-entity  position="0 5.7 -2" htmlembed look-at="[camera]">
+                <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+            </a-entity>
+        </a-scene>
+
+    </a-frame>
+
+</html>
